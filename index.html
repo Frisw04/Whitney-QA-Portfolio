@@ -378,6 +378,44 @@ available writing space, and content positioning.
 Improved the writing experience by ensuring the usable page area remained visible
 when the keyboard appeared while maintaining consistent page behavior across devices.
 </p>
+<h3>Case Study 3: Multi-Page Data Persistence & Migration</h3>
+
+<p>
+<strong>Problem:</strong>
+Living Pages originally stored one journal page per day. When multi-page support
+was introduced, the data architecture needed to support multiple independent pages
+while preserving the correct text, drawings, attachments, and page settings.
+</p>
+
+<p>
+<strong>Investigation:</strong>
+I tested page creation, page switching, device rotation, application relaunch,
+and persistence across multiple pages. During testing, I identified cases where
+page-specific state could restore from the wrong page or where drawing state could
+temporarily disappear during rotation.
+</p>
+
+<p>
+<strong>Testing Approach:</strong>
+I used page-specific identifiers, application logs, repeated reproduction steps,
+and regression testing to trace data through the SwiftData persistence layer.
+I compared Page 1 and Page 2 behavior and tested whether each page maintained
+independent text, drawing, attachment, and configuration state.
+</p>
+
+<p>
+<strong>Migration Testing:</strong>
+I tested the transition from the original single-page data model to the new
+multi-page architecture. This included verifying schema migration behavior,
+legacy Page 1 compatibility, page creation, and preservation of existing data.
+</p>
+
+<p>
+<strong>Result:</strong>
+The investigation helped establish a page-scoped persistence architecture in which
+individual pages could be identified and tested independently. It also exposed
+rotation and autosave edge cases for continued regression testing.
+</p>
 </main>
 
 </main>
