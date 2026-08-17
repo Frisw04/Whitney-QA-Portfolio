@@ -79,3 +79,26 @@ grid-template-columns:1fr;
 }
 
 }
+.skill-card li {
+    color: #f5f5f5;
+}
+
+.skill-card h3 {
+    color: #4da3ff;
+}
+/* Skill Cards */
+.skill-card {
+    background-color: #172033;
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 35px;
+}
+
+.skill-card li {
+    color: #e6e6e6;
+    margin-bottom: 12px;
+}
+
+.skill-card h3 {
+    color: #4da3ff;
+}

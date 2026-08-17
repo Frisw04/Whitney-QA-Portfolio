@@ -350,6 +350,34 @@ drawing state management, and persistence timing.
 
 
 </section>
+<h3>Case Study 2: Keyboard Viewport & Layout Behavior</h3>
+
+<p>
+<strong>Problem:</strong> 
+The application writing area behaved differently when the software keyboard appeared.
+The final lines of content could become hidden, and page layout changed between portrait
+and landscape orientations.
+</p>
+
+<p>
+<strong>Investigation:</strong>
+I reproduced the issue on physical iPhone and iPad devices while testing different
+screen orientations, keyboard states, and page configurations. I analyzed whether the
+issue was caused by text layout, viewport sizing, or application geometry calculations.
+</p>
+
+<p>
+<strong>Testing Approach:</strong>
+I compared expected and actual behavior during keyboard presentation, rotation,
+and page rendering. I used debugging information to evaluate viewport size,
+available writing space, and content positioning.
+</p>
+
+<p>
+<strong>Result:</strong>
+Improved the writing experience by ensuring the usable page area remained visible
+when the keyboard appeared while maintaining consistent page behavior across devices.
+</p>
 </main>
 
 </main>
