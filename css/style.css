@@ -1,143 +1,618 @@
-#skills {
+/* ==================== GLOBAL STYLES ==================== */
 
-max-width:1100px;
-
-margin:auto;
-
-padding:80px 30px;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #0a0e27;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* ==================== HEADER & NAVIGATION ==================== */
+
+header {
+  background-color: rgba(10, 14, 39, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(77, 163, 255, 0.1);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  color: #4da3ff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav a {
+  color: #f5f5f5;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #4da3ff;
+}
+
+/* ==================== MAIN & SECTIONS ==================== */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #f5f5f5;
+}
+
+section h3 {
+  color: #4da3ff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* ==================== HERO SECTION ==================== */
+
+#hero {
+  text-align: center;
+  padding: 120px 30px;
+  background: linear-gradient(135deg, rgba(77, 163, 255, 0.1) 0%, rgba(10, 14, 39, 0) 100%);
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+#hero > p:first-child {
+  color: #4da3ff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  color: #f5f5f5;
+  line-height: 1.2;
+}
+
+#hero > p:nth-of-type(2) {
+  font-size: 1.2rem;
+  color: #a0aec0;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+#hero div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#hero button {
+  background-color: #4da3ff;
+  color: #0a0e27;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: #3d8ae6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(77, 163, 255, 0.2);
+}
+
+#hero a:nth-child(2) button {
+  background-color: transparent;
+  color: #4da3ff;
+  border: 2px solid #4da3ff;
+}
+
+#hero a:nth-child(2) button:hover {
+  background-color: #4da3ff;
+  color: #0a0e27;
+}
+
+/* ==================== ABOUT SECTION ==================== */
+
+#about {
+  background-color: rgba(23, 32, 51, 0.5);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin-bottom: 60px;
+}
+
+#about h2 {
+  color: #4da3ff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#about p {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #cbd5e0;
+}
+
+/* ==================== PROJECTS SECTION (LIVING PAGES INTRO) ==================== */
+
+#projects {
+  margin-bottom: 60px;
+}
+
+#projects h2 {
+  color: #4da3ff;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#projects h3 {
+  color: #9ecbff;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+#projects > p {
+  font-size: 1.1rem;
+  color: #cbd5e0;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+#projects ul {
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+}
+
+#projects li {
+  color: #a0aec0;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+#projects li:before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #4da3ff;
+  font-weight: bold;
+}
+
+/* ==================== SKILLS SECTION ==================== */
+
+#skills {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 0;
+}
 
 #skills h2 {
-
-font-size:2.5rem;
-
-margin-bottom:40px;
-
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
-
-
 
 .skills-container {
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:25px;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 }
-
-
 
 .skill-card {
-
-background:#162235;
-
-padding:30px;
-
-border-radius:20px;
-
+  background: #162235;
+  padding: 30px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(77, 163, 255, 0.1);
 }
 
-
+.skill-card:hover {
+  background: #1a2d47;
+  border-color: rgba(77, 163, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(77, 163, 255, 0.15);
+}
 
 .skill-card h3 {
-
-color:#4da3ff;
-
-margin-bottom:20px;
-
+  color: #4da3ff;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
 }
-
-
 
 .skill-card ul {
-
-padding-left:20px;
-
+  padding-left: 20px;
+  list-style: none;
 }
-
-
 
 .skill-card li {
-
-margin-bottom:10px;
-
+  margin-bottom: 10px;
+  color: #cbd5e0;
+  position: relative;
+  padding-left: 15px;
 }
 
+.skill-card li:before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: #4da3ff;
+  font-size: 0.6rem;
+}
+
+
+
+/* ==================== CASE STUDIES SECTION ==================== */
+
+#case-studies {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+#case-studies h2 {
+  color: #f5f5f5;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
 
 .case-study-card {
-    background-color: #172033;
-    border-radius: 25px;
-    padding: 40px;
-    margin-bottom: 35px;
-    color: #f5f5f5;
+  background-color: #172033;
+  border-radius: 25px;
+  padding: 40px;
+  margin-bottom: 35px;
+  color: #f5f5f5;
+  border: 1px solid rgba(77, 163, 255, 0.1);
+  transition: all 0.3s ease;
 }
+
+.case-study-card:hover {
+  border-color: rgba(77, 163, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(77, 163, 255, 0.1);
+}
+
 .case-study-card h3 {
-    color: #4da3ff;
-    margin-bottom: 25px;
+  color: #4da3ff;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+}
+
+.case-study-card p {
+  color: #cbd5e0;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 .case-study-card strong {
-    color: #9ecbff;
+  color: #9ecbff;
+  font-weight: 600;
 }
+
+/* ==================== CONTACT SECTION ==================== */
+
 #contact {
-    background-color: #172033;
-    color: #f5f5f5;
-    border-radius: 25px;
-    padding: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-#contact a {
-    color: #4da3ff;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
+  background-color: #172033;
+  color: #f5f5f5;
+  border-radius: 25px;
+  padding: 50px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid rgba(77, 163, 255, 0.1);
 }
 
 #contact h2 {
-    color: #4da3ff;
-    margin-top: 0;
+  color: #4da3ff;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
+
 #contact p {
-    color: #f5f5f5;
-}
-@media(max-width:900px){
-
-.skills-container{
-
-grid-template-columns:1fr;
-
+  color: #cbd5e0;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-}
-.skill-card li {
-    color: #f5f5f5;
-}
-
-.skill-card h3 {
-    color: #4da3ff;
-}
-/* Skill Cards */
-.skill-card {
-    background-color: #172033;
-    border-radius: 25px;
-    padding: 40px;
-    margin-bottom: 35px;
+#contact a {
+  color: #4da3ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.skill-card li {
-    color: #e6e6e6;
+#contact a:hover {
+  color: #3d8ae6;
+  text-decoration: underline;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 30px;
+  }
+
+  #hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav h2 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  section h3 {
+    font-size: 1.2rem;
+  }
+
+  #hero {
+    padding: 80px 20px;
+    margin-top: 20px;
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero > p:nth-of-type(2) {
+    font-size: 1rem;
+  }
+
+  #hero div {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  #hero button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #about {
+    padding: 40px 25px;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill-card {
+    padding: 25px;
+  }
+
+  .case-study-card {
+    padding: 30px 25px;
+  }
+
+  .case-study-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .case-study-card p {
+    font-size: 0.95rem;
+  }
+
+  #contact {
+    padding: 40px 25px;
+  }
+
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+
+  #contact p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0 20px;
+  }
+
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav h2 {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 30px 0;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+
+  section h3 {
+    font-size: 1rem;
+  }
+
+  #hero {
+    padding: 60px 15px;
+  }
+
+  #hero > p:first-child {
+    font-size: 0.8rem;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  #hero > p:nth-of-type(2) {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  #hero button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  #about {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+
+  #about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  #about p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  #projects > p {
+    font-size: 1rem;
+  }
+
+  .skill-card {
+    padding: 20px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .skill-card li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .case-study-card {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .case-study-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .case-study-card p {
+    font-size: 0.9rem;
     margin-bottom: 12px;
-}
+  }
 
-.skill-card h3 {
-    color: #4da3ff;
+  #contact {
+    padding: 30px 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  #contact h2 {
+    font-size: 1.3rem;
+  }
+
+  #contact p {
+    font-size: 0.95rem;
+  }
 }
