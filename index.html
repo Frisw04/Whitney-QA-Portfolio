@@ -393,6 +393,46 @@ QA Case Studies
     Improved the writing experience by ensuring the usable page area remained visible
     when the keyboard appeared while maintaining consistent page behavior across devices.
     </p>
+
+    <div class="evidence">
+        <h4>Testing Evidence</h4>
+
+        <img
+            src="images/    keyboard-viewport-case-study/01-viewport-defect.PNG"
+            alt="Viewport defect with lower writing content hidden"
+            style="width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto;"
+        >
+        <p class="evidence-caption">
+            Initial viewport testing showing the layout defect that could hide content near the bottom of the page.
+        </p>
+
+        <img
+            src="images/    keyboard-viewport-case-study/02-keyboard-active.PNG"
+            alt="Keyboard-active viewport testing"
+            style="width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto;"
+        >
+        <p class="evidence-caption">
+            Keyboard-active testing used to reproduce the viewport and layout behavior while entering text.
+        </p>
+
+        <img
+            src="images/    keyboard-viewport-case-study/03-viewport-fix verified.png"
+            alt="Corrected viewport with writing area remaining visible"
+            style="width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto;"
+        >
+        <p class="evidence-caption">
+            Corrected viewport behavior keeping the usable writing area visible when the software keyboard appeared.
+        </p>
+
+        <img
+            src="images/    keyboard-viewport-case-study/04-full-test-layout.PNG"
+            alt="Full test layout with multiple lower text entries"
+            style="width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto;"
+        >
+        <p class="evidence-caption">
+            Verification layout with multiple test-text entries intentionally placed down the page to confirm that lower entries remained accessible with the keyboard active.
+        </p>
+    </div>
     </div>
 
 <div class="case-study-card">
