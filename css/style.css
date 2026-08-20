@@ -350,6 +350,213 @@ section p {
   font-weight: 600;
 }
 
+/* ==================== QA ARTIFACTS SECTION ==================== */
+
+#qa-artifacts {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+#qa-artifacts h2 {
+  color: #f5f5f5;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.qa-artifact-card {
+  background-color: #172033;
+  border-radius: 25px;
+  padding: 40px;
+  color: #f5f5f5;
+  border: 1px solid rgba(77, 163, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.qa-artifact-card:hover {
+  border-color: rgba(77, 163, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(77, 163, 255, 0.1);
+}
+
+.qa-artifact-card h3 {
+  color: #4da3ff;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+}
+
+.qa-artifact-card p {
+  color: #cbd5e0;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.qa-artifact-card strong {
+  color: #9ecbff;
+  font-weight: 600;
+}
+
+.artifact-status {
+  color: #9ecbff;
+  font-weight: 600;
+}
+
+.artifact-button {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #4da3ff;
+  color: #0a0e27;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.artifact-button:hover {
+  background-color: #3d8ae6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(77, 163, 255, 0.2);
+}
+
+/* ==================== QA TEST CASE PAGE ==================== */
+
+#test-case-page {
+  padding-top: 60px;
+}
+
+.test-case-header {
+  margin-bottom: 40px;
+}
+
+.test-case-header h1 {
+  color: #4da3ff;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.test-case-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px 30px;
+  margin: 0;
+  padding: 25px;
+  background-color: rgba(23, 32, 51, 0.75);
+  border: 1px solid rgba(77, 163, 255, 0.1);
+  border-radius: 15px;
+}
+
+.test-case-meta div {
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  gap: 10px;
+}
+
+.test-case-meta dt {
+  color: #9ecbff;
+  font-weight: 600;
+}
+
+.test-case-meta dd {
+  color: #cbd5e0;
+  margin: 0;
+}
+
+.test-case-content {
+  background-color: #172033;
+  border-radius: 25px;
+  padding: 40px;
+  border: 1px solid rgba(77, 163, 255, 0.1);
+}
+
+.test-case-content h2 {
+  color: #4da3ff;
+  font-size: 1.7rem;
+  margin: 35px 0 20px;
+}
+
+.test-case-content h2:first-child {
+  margin-top: 0;
+}
+
+.test-case-content p {
+  color: #cbd5e0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.test-case-content ul,
+.test-case-content ol {
+  color: #cbd5e0;
+  margin: 0 0 20px 25px;
+}
+
+.test-case-content li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.test-case-results {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 20px;
+  color: #cbd5e0;
+}
+
+.test-case-results th,
+.test-case-results td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(77, 163, 255, 0.15);
+}
+
+.test-case-results th {
+  color: #9ecbff;
+  font-weight: 600;
+}
+
+.test-case-results td:last-child {
+  color: #9ecbff;
+  font-weight: 600;
+}
+
+.test-case-evidence {
+  padding: 20px;
+  background-color: rgba(10, 14, 39, 0.35);
+  border-radius: 12px;
+}
+
+.test-case-evidence-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.test-case-evidence-caption {
+  margin: 15px 0 0;
+  color: #a0aec0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.test-case-status {
+  color: #9ecbff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.back-to-artifacts {
+  display: inline-block;
+  margin-top: 30px;
+  color: #4da3ff;
+  font-weight: 600;
+}
+
+.back-to-artifacts:hover {
+  color: #3d8ae6;
+  text-decoration: underline;
+}
+
 /* ==================== CONTACT SECTION ==================== */
 
 #contact {
@@ -488,6 +695,34 @@ section p {
     font-size: 0.95rem;
   }
 
+  .qa-artifact-card {
+    padding: 30px 25px;
+  }
+
+  .qa-artifact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .qa-artifact-card p {
+    font-size: 0.95rem;
+  }
+
+  #test-case-page {
+    padding-top: 30px;
+  }
+
+  .test-case-header h1 {
+    font-size: 2rem;
+  }
+
+  .test-case-content {
+    padding: 30px 25px;
+  }
+
+  .test-case-meta {
+    grid-template-columns: 1fr;
+  }
+
   #contact {
     padding: 40px 25px;
   }
@@ -600,6 +835,47 @@ section p {
   .case-study-card p {
     font-size: 0.9rem;
     margin-bottom: 12px;
+  }
+
+  .qa-artifact-card {
+    padding: 20px;
+  }
+
+  .qa-artifact-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .qa-artifact-card p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .test-case-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .test-case-content {
+    padding: 20px;
+  }
+
+  .test-case-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .test-case-meta {
+    padding: 20px;
+  }
+
+  .test-case-meta div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .test-case-results th,
+  .test-case-results td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
   }
 
   #contact {

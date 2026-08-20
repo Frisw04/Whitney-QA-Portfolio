@@ -46,6 +46,10 @@ Whitney Frisby
 </li>
 
 <li>
+<a href="#qa-artifacts">Artifacts</a>
+</li>
+
+<li>
 <a href="#contact">Contact</a>
 </li>
 
@@ -103,7 +107,7 @@ View QA Work
 
 
 
-<a href="documents/Whitney_Frisby_QA_AI_Testing_Resume.pdf"></a>>
+<a href="documents/Whitney_Frisby_QA_AI_Testing_Resume.pdf">
 
 <button>
 Download Resume
@@ -149,8 +153,8 @@ issues, analyzing results, and verifying solutions.
 
 Through my independent iOS/iPadOS application project,
 Living Pages, I have gained hands-on experience testing
-SwiftUI applications, SwiftData persistence, CloudKit
-synchronization, PencilKit drawing behavior, and
+SwiftUI applications, SwiftData persistence, PencilKit
+drawing behavior, and
 cross-device user experiences.
 
 </p>
@@ -286,8 +290,6 @@ Testing Environment
 
 <li>SwiftData persistence testing</li>
 
-<li>CloudKit synchronization testing</li>
-
 <li>PencilKit drawing behavior testing</li>
 
 </ul>
@@ -345,8 +347,9 @@ QA Case Studies
 
     <strong>Result:</strong>
 
-    Improved understanding of PencilKit lifecycle behavior,
-    drawing state management, and persistence timing.
+    Restored stable PencilKit drawing behavior across device rotation and page-state changes.
+    Regression testing confirmed drawings remained visible and correctly positioned through rotation,
+    page navigation, relaunch, and persistence scenarios.
 
     </p>
 
@@ -463,8 +466,9 @@ QA Case Studies
 
     <p>
     <strong>Result:</strong>
-    Multi-page state became reliably page-scoped, Page 2 content persisted correctly,
-    and saved journal content restored after navigation and relaunch testing.
+    Multi-page state became reliably page-scoped, allowing Page 1 and Page 2 to retain their own text,
+    drawings, and attachments. Regression testing verified that saved page content restored correctly
+    after page navigation, force-close, and relaunch.
     </p>
 
     <div class="evidence">
@@ -490,6 +494,36 @@ QA Case Studies
     </div>
 </div>
 </section>
+
+<section id="qa-artifacts">
+
+<h2>
+QA Artifacts
+</h2>
+
+<div class="qa-artifact-card">
+    <h3>
+    LP-001 — PencilKit Drawing Persistence &amp; Rotation Stability
+    </h3>
+
+    <p><strong>Type:</strong> Functional / Regression / Persistence Testing</p>
+
+    <p><strong>Platform:</strong> iOS / iPadOS</p>
+
+    <p><strong>Status:</strong> <span class="artifact-status">PASS — RESOLVED</span></p>
+
+    <p>
+    Formal test case documenting rotation stability, drawing persistence,
+    repeated regression testing, and physical-device verification for Living Pages.
+    </p>
+
+    <a class="artifact-button" href="pages/lp-001-test-case.html">
+    View Test Case
+    </a>
+</div>
+
+</section>
+
 <section id="contact">
 
     <h2>Contact</h2>

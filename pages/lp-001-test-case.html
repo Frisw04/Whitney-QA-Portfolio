@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LP-001 Test Case | Whitney Frisby</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>Whitney Frisby</h2>
+<ul>
+<li><a href="../index.html#about">About</a></li>
+<li><a href="../index.html#skills">Skills</a></li>
+<li><a href="../index.html#projects">Projects</a></li>
+<li><a href="../index.html#case-studies">Case Studies</a></li>
+<li><a href="../index.html#qa-artifacts">Artifacts</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="test-case-page">
+
+<div class="test-case-header">
+<h1>LP-001 — PencilKit Drawing Persistence &amp; Rotation Stability</h1>
+
+<dl class="test-case-meta">
+<div><dt>Test Case ID</dt><dd>LP-001</dd></div>
+<div><dt>Application</dt><dd>Living Pages</dd></div>
+<div><dt>Feature</dt><dd>PencilKit Drawing Persistence</dd></div>
+<div><dt>Test Type</dt><dd>Functional / Regression / Persistence</dd></div>
+<div><dt>Priority</dt><dd>High</dd></div>
+<div><dt>Platform</dt><dd>iOS / iPadOS</dd></div>
+<div><dt>Test Environment</dt><dd>Physical iPad</dd></div>
+<div><dt>Final Status</dt><dd>PASS</dd></div>
+</dl>
+</div>
+
+<article class="test-case-content">
+
+<h2>Objective</h2>
+<p>Verify that PencilKit drawings remain visible, correctly positioned, and persisted when the device rotates between portrait and landscape and when the application undergoes common state changes.</p>
+
+<h2>Preconditions</h2>
+<ul>
+<li>Living Pages is installed and launches successfully.</li>
+<li>A journal page is available for testing.</li>
+<li>Drawing mode is available.</li>
+<li>PencilKit canvas is active.</li>
+<li>Test page can be viewed in both portrait and landscape orientations.</li>
+</ul>
+
+<h2>Test Steps</h2>
+<ol>
+<li>Open a journal page in Living Pages.</li>
+<li>Enter drawing mode.</li>
+<li>Draw multiple marks in different areas of the page, including near page boundaries.</li>
+<li>Observe the position and scale of the drawings in portrait orientation.</li>
+<li>Rotate the device from portrait to landscape.</li>
+<li>Verify the drawings remain visible and correctly positioned.</li>
+<li>Rotate from landscape back to portrait.</li>
+<li>Verify the drawings remain visible and correctly positioned.</li>
+<li>Repeat the orientation changes multiple times.</li>
+<li>Leave the journal page and return to it.</li>
+<li>Force-close and relaunch the application.</li>
+<li>Return to the test page and verify the drawing persists.</li>
+<li>Verify hover and touch interaction do not unexpectedly move or remove the drawing.</li>
+<li>Verify drawing persistence through later page/day state changes.</li>
+</ol>
+
+<h2>Expected Result</h2>
+<p>Drawings should remain visible, correctly positioned, correctly scaled, and associated with the correct journal page throughout rotation and persistence events.</p>
+<p>No drawing should disappear, shift unexpectedly, clip because of rotation, or restore in an incorrect position.</p>
+
+<h2>Actual Result</h2>
+<p>After the final fix, drawings remained stable through portrait-to-landscape and landscape-to-portrait rotation. Repeated rotation, page leave/return, application relaunch, hover/touch interaction, and persistence testing passed.</p>
+
+<h2>Regression Results</h2>
+<table class="test-case-results">
+<thead><tr><th>Test Scenario</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Portrait → Landscape</td><td>PASS</td></tr>
+<tr><td>Landscape → Portrait</td><td>PASS</td></tr>
+<tr><td>Repeated Rotation</td><td>PASS</td></tr>
+<tr><td>Leave / Return to Page</td><td>PASS</td></tr>
+<tr><td>Relaunch / Force Quit</td><td>PASS</td></tr>
+<tr><td>Hover / Touch Behavior</td><td>PASS</td></tr>
+<tr><td>Day / Midnight Persistence</td><td>PASS</td></tr>
+</tbody>
+</table>
+
+<h2>Evidence</h2>
+<div class="test-case-evidence">
+<img class="test-case-evidence-image" src="../images/qa-artifacts/lp-001-pencilkit-rotation/living-pages-rotation-stability-case-study.png" alt="LP-001 regression summary documenting the defect investigation, geometry debugging, test strategy, and final verification results.">
+<p class="test-case-evidence-caption">LP-001 regression summary documenting the defect investigation, geometry debugging, test strategy, and final verification results.</p>
+</div>
+
+<h2>Final Result</h2>
+<p class="test-case-status">PASS — RESOLVED</p>
+<p>The PencilKit drawing and page geometry implementation remained stable throughout the tested rotation and persistence scenarios.</p>
+
+</article>
+
+<a class="back-to-artifacts" href="../index.html#qa-artifacts">← Back to QA Artifacts</a>
+
+</main>
+
+</body>
+</html>
