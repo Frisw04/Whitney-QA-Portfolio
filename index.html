@@ -436,44 +436,58 @@ QA Case Studies
     </div>
 
 <div class="case-study-card">
-    <h3>Case Study 3: Multi-Page Data Persistence & Migration</h3>
+    <h3>Case Study 3: Multi-Page Persistence &amp; SwiftData Reliability</h3>
 
     <p>
     <strong>Problem:</strong>
-    Living Pages originally stored one journal page per day. When multi-page support
-    was introduced, the data architecture needed to support multiple independent pages
-    while preserving the correct text, drawings, attachments, and page settings.
-    </p>
-
-    <p>
-    <strong>Investigation:</strong>
-    I tested page creation, page switching, device rotation, application relaunch,
-    and persistence across multiple pages. During testing, I identified cases where
-    page-specific state could restore from the wrong page or where drawing state could
-    temporarily disappear during rotation.
+    After introducing multi-page journal support, page-scoped state and SwiftData
+    persistence became more complex. Testing exposed startup and persistence failures,
+    along with risks involving content belonging to the wrong page or failing to restore correctly.
     </p>
 
     <p>
     <strong>Testing Approach:</strong>
-    I used page-specific identifiers, application logs, repeated reproduction steps,
-    and regression testing to trace data through the SwiftData persistence layer.
-    I compared Page 1 and Page 2 behavior and tested whether each page maintained
-    independent text, drawing, attachment, and configuration state.
+    I tested page creation, Page 1 and Page 2 navigation, text, PencilKit drawings,
+    media attachments, autosave state, force-close and relaunch behavior, and persistence
+    across page changes. I used physical-device testing and debugging information to
+    reproduce failures, perform regression testing, and verify fixes.
     </p>
 
     <p>
-    <strong>Migration Testing:</strong>
-    I tested the transition from the original single-page data model to the new
-    multi-page architecture. This included verifying schema migration behavior,
-    legacy Page 1 compatibility, page creation, and preservation of existing data.
+    <strong>Investigation:</strong>
+    I traced page identity and persistence behavior through the SwiftData model and
+    page-scoped state. Root-cause investigation focused on the relationship between day
+    identity, page index, saved content, and restored UI state. I also used state-management
+    testing to verify that text, drawings, and attachments remained associated with the correct page.
     </p>
 
     <p>
     <strong>Result:</strong>
-    The investigation helped establish a page-scoped persistence architecture in which
-    individual pages could be identified and tested independently. It also exposed
-    rotation and autosave edge cases for continued regression testing.
+    Multi-page state became reliably page-scoped, Page 2 content persisted correctly,
+    and saved journal content restored after navigation and relaunch testing.
     </p>
+
+    <div class="evidence">
+        <h4>Testing Evidence</h4>
+
+        <img
+            src="images/multipage-persistence-case-study/01-swiftdata-startup-failure.png"
+            alt="SwiftData startup failure captured during persistence testing"
+            style="width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto;"
+        >
+        <p class="evidence-caption">
+            SwiftData startup failure captured during persistence testing before the multi-page storage path was stabilized.
+        </p>
+
+        <img
+            src="images/multipage-persistence-case-study/02-page-2-persistence-verified.png"
+            alt="Physical-device verification of Page 2 persistence"
+            style="width: 100%; max-width: 700px; height: auto; display: block; margin: 0 auto;"
+        >
+        <p class="evidence-caption">
+            Physical-device verification of Page 2 with text, PencilKit drawing, photo, video, keyboard interaction, page navigation, and saved state active together.
+        </p>
+    </div>
 </div>
 </section>
 <section id="contact">
