@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TC-002 Test Case | Whitney Frisby</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>Whitney Frisby</h2>
+<ul>
+<li><a href="../index.html#about">About</a></li>
+<li><a href="../index.html#skills">Skills</a></li>
+<li><a href="../index.html#projects">Projects</a></li>
+<li><a href="../index.html#case-studies">Case Studies</a></li>
+<li><a href="../index.html#qa-artifacts">Artifacts</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="test-case-page">
+
+<div class="test-case-header">
+<h1>TC-002 — Multi-Page Content Persistence After Relaunch</h1>
+
+<dl class="test-case-meta">
+<div><dt>Test Case ID</dt><dd>TC-002</dd></div>
+<div><dt>Application</dt><dd>Living Pages</dd></div>
+<div><dt>Feature</dt><dd>Multi-Page Persistence</dd></div>
+<div><dt>Test Type</dt><dd>Functional / Persistence / Regression</dd></div>
+<div><dt>Priority</dt><dd>High</dd></div>
+<div><dt>Platform</dt><dd>iOS / iPadOS</dd></div>
+<div><dt>Test Environment</dt><dd>Physical Device</dd></div>
+<div><dt>Final Status</dt><dd>PASS</dd></div>
+</dl>
+</div>
+
+<article class="test-case-content">
+
+<h2>Objective</h2>
+<p>Verify that content saved to an individual Living Pages journal page remains associated with the correct page after navigation, force-close, and application relaunch.</p>
+<p>The test verifies page-scoped persistence for text, PencilKit drawings, and media attachments.</p>
+
+<h2>Preconditions</h2>
+<ul>
+<li>Living Pages is installed and launches successfully.</li>
+<li>A journal day containing multiple pages is available.</li>
+<li>Page 1 and Page 2 can be navigated independently.</li>
+<li>Autosave is functioning.</li>
+<li>Page 2 is available for test content.</li>
+</ul>
+
+<h2>Test Data</h2>
+<p>Add distinguishable content to Page 2 so restored content can be visually identified:</p>
+<ul>
+<li>Text</li>
+<li>PencilKit drawing</li>
+<li>Photo attachment</li>
+<li>Video attachment</li>
+</ul>
+
+<h2>Test Steps</h2>
+<ol>
+<li>Launch Living Pages on the physical test device.</li>
+<li>Open a journal day containing multiple pages.</li>
+<li>Navigate to Page 2.</li>
+<li>Enter identifiable text on Page 2.</li>
+<li>Add a PencilKit drawing.</li>
+<li>Add a photo attachment.</li>
+<li>Add a video attachment.</li>
+<li>Verify all test content is displayed on Page 2.</li>
+<li>Wait for the application to display the Saved state.</li>
+<li>Navigate away from Page 2.</li>
+<li>Return to Page 2.</li>
+<li>Verify the correct Page 2 content is restored.</li>
+<li>Force-close Living Pages.</li>
+<li>Relaunch the application.</li>
+<li>Return to the same journal day and Page 2.</li>
+<li>Verify the text is restored.</li>
+<li>Verify the PencilKit drawing is restored.</li>
+<li>Verify the photo attachment is restored.</li>
+<li>Verify the video attachment is restored.</li>
+<li>Verify Page 2 content has not appeared on Page 1.</li>
+</ol>
+
+<h2>Expected Result</h2>
+<p>Page 2 should retain its own text, drawing, photo, and video after navigation and application relaunch.</p>
+<p>All content should restore to the correct page without disappearing, duplicating, or transferring to another page.</p>
+<p>Page 1 and Page 2 should maintain independent persisted state.</p>
+
+<h2>Actual Result</h2>
+<p>Page 2 restored its saved text, PencilKit drawing, photo, and video after navigation and application relaunch.</p>
+<p>The test content remained associated with Page 2 and did not transfer to Page 1.</p>
+
+<h2>Verification Results</h2>
+<table class="test-case-results">
+<thead><tr><th>Verification</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Page 2 text restored</td><td>PASS</td></tr>
+<tr><td>PencilKit drawing restored</td><td>PASS</td></tr>
+<tr><td>Photo attachment restored</td><td>PASS</td></tr>
+<tr><td>Video attachment restored</td><td>PASS</td></tr>
+<tr><td>Page navigation preserved content</td><td>PASS</td></tr>
+<tr><td>Force-close / relaunch preserved content</td><td>PASS</td></tr>
+<tr><td>Page 1 remained independent</td><td>PASS</td></tr>
+<tr><td>Page 2 remained independent</td><td>PASS</td></tr>
+</tbody>
+</table>
+
+<h2>Evidence</h2>
+<div class="test-case-evidence">
+<img class="test-case-evidence-image" src="../images/qa-artifacts/tc-002-page-persistence/01-page-2-persistence-verification.png" alt="Physical-device verification of Page 2 with page-scoped text, PencilKit drawing, photo and video attachments, navigation controls, keyboard interaction, and saved state active together.">
+<p class="test-case-evidence-caption">Physical-device verification of Page 2 with page-scoped text, PencilKit drawing, photo and video attachments, navigation controls, keyboard interaction, and saved state active together.</p>
+</div>
+
+<h2>Final Result</h2>
+<p class="test-case-status">PASS</p>
+<p>Multi-page content remained page-scoped and persisted correctly through navigation, force-close, and application relaunch.</p>
+
+</article>
+
+<a class="back-to-artifacts" href="../index.html#qa-artifacts">← Back to QA Artifacts</a>
+
+</main>
+
+</body>
+</html>

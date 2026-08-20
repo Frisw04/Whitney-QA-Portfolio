@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RC-001 Regression Checklist | Whitney Frisby</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>Whitney Frisby</h2>
+<ul>
+<li><a href="../index.html#about">About</a></li>
+<li><a href="../index.html#skills">Skills</a></li>
+<li><a href="../index.html#projects">Projects</a></li>
+<li><a href="../index.html#case-studies">Case Studies</a></li>
+<li><a href="../index.html#qa-artifacts">Artifacts</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main id="test-case-page">
+
+<div class="test-case-header">
+<h1>RC-001 — Living Pages Core Regression Checklist</h1>
+
+<dl class="test-case-meta">
+<div><dt>Checklist ID</dt><dd>RC-001</dd></div>
+<div><dt>Application</dt><dd>Living Pages</dd></div>
+<div><dt>Test Type</dt><dd>Regression / Functional / Persistence</dd></div>
+<div><dt>Platform</dt><dd>iOS / iPadOS</dd></div>
+<div><dt>Test Environment</dt><dd>Physical Device</dd></div>
+<div><dt>Overall Status</dt><dd>PASS</dd></div>
+</dl>
+</div>
+
+<article class="test-case-content">
+
+<div class="regression-checklist-intro">
+<h2>Purpose</h2>
+<p>Verify that core Living Pages functionality continues to work after code changes, bug fixes, persistence updates, layout changes, and multi-page feature work.</p>
+<p>This checklist is intended to catch regressions across the areas most affected by recent development.</p>
+</div>
+
+<section class="checklist-category">
+<h2>Launch &amp; Navigation</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Application launches successfully.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Current journal day loads correctly.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Previous-day navigation works.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Next-day navigation works when available.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Same-day Page 1 / Page 2 navigation works.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Correct page number is shown.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Relaunch returns to the expected saved page state.</li>
+</ul>
+</section>
+
+<section class="checklist-category">
+<h2>Text Editing</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Text can be entered and edited.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Text remains aligned with the writing area.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Text remains visible when the keyboard appears.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Bottom writing area remains accessible.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Portrait keyboard behavior works.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Landscape keyboard behavior works.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Text persists after page navigation.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Text persists after force-close and relaunch.</li>
+</ul>
+</section>
+
+<section class="checklist-category">
+<h2>PencilKit Drawing</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Drawing mode opens successfully.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>PencilKit strokes appear while drawing.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Drawings remain visible after portrait → landscape rotation.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Drawings remain visible after landscape → portrait rotation.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Repeated rotation does not remove or shift drawings unexpectedly.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Drawings remain associated with the correct page.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Drawings persist after leaving and returning to the page.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Drawings persist after force-close and relaunch.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Hover and touch interaction do not corrupt drawing state.</li>
+</ul>
+</section>
+
+<section class="checklist-category">
+<h2>Autosave &amp; Saved State</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Editing triggers the saving state.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Saved indicator updates after persistence completes.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Text changes are saved.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Drawing changes are saved.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 1 saves independently.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 2 saves independently.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Saved content restores correctly after relaunch.</li>
+</ul>
+</section>
+
+<section class="checklist-category">
+<h2>Multi-Page Persistence</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 1 retains its own text.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 2 retains its own text.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 1 retains its own drawings.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 2 retains its own drawings.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 1 retains its own attachments.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page 2 retains its own attachments.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Content does not transfer between Page 1 and Page 2.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page content remains correct after navigation.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page content remains correct after force-close and relaunch.</li>
+</ul>
+</section>
+
+<section class="checklist-category">
+<h2>Attachments &amp; Media</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Photo attachment can be added.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Video attachment can be added.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Existing attachments remain visible.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Attachments remain associated with the correct page.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Attachments persist after page navigation.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Attachments persist after force-close and relaunch.</li>
+</ul>
+</section>
+
+<section class="checklist-category">
+<h2>Orientation &amp; Layout</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Portrait layout renders correctly.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Landscape layout renders correctly.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page geometry remains stable through rotation.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Keyboard viewport remains usable in portrait.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Keyboard viewport remains usable in landscape.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Media and drawings remain positioned correctly after rotation.</li>
+</ul>
+</section>
+
+<section class="checklist-category">
+<h2>Day &amp; State Persistence</h2>
+<ul class="checklist-items">
+<li><span class="checklist-check" aria-hidden="true">✓</span>Switching journal days loads the correct content.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Returning to a previous day restores its content.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Page-specific content does not appear on another day.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Force-close and relaunch preserve saved journal state.</li>
+<li><span class="checklist-check" aria-hidden="true">✓</span>Midnight/day transition does not remove persisted drawing state.</li>
+</ul>
+</section>
+
+<section class="regression-result">
+<h2>Regression Result</h2>
+<p class="test-case-status">PASS</p>
+<p>Core Living Pages functionality remained stable across the tested navigation, text editing, PencilKit drawing, autosave, keyboard, multi-page persistence, attachment, rotation, relaunch, and day-state scenarios.</p>
+</section>
+
+</article>
+
+<a class="back-to-artifacts" href="../index.html#qa-artifacts">← Back to QA Artifacts</a>
+
+</main>
+
+</body>
+</html>

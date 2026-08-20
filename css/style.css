@@ -557,6 +557,76 @@ section p {
   text-decoration: underline;
 }
 
+/* ==================== REGRESSION CHECKLIST PAGE ==================== */
+
+.regression-checklist-intro {
+  margin-bottom: 35px;
+}
+
+.regression-checklist-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.checklist-category {
+  margin-top: 35px;
+}
+
+.checklist-category:first-child {
+  margin-top: 0;
+}
+
+.checklist-category h2 {
+  margin-bottom: 18px;
+}
+
+.checklist-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  padding: 12px 15px;
+  color: #cbd5e0;
+  background-color: rgba(10, 14, 39, 0.35);
+  border: 1px solid rgba(77, 163, 255, 0.08);
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.checklist-check {
+  flex: 0 0 auto;
+  color: #0a0e27;
+  background-color: #4da3ff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.regression-result {
+  margin-top: 35px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(77, 163, 255, 0.15);
+}
+
+.regression-result h2 {
+  margin-top: 0;
+}
+
 /* ==================== CONTACT SECTION ==================== */
 
 #contact {
@@ -720,6 +790,10 @@ section p {
   }
 
   .test-case-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .checklist-items {
     grid-template-columns: 1fr;
   }
 
